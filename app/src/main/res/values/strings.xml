@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">OnboardSystem</string>
+    <string name="tilt">Tilt:</string>
+    <string name="acceleration">Acceleration:</string>
+    <string name="message" >Message:</string>
+    <string name="x">X:</string>
+    <string name="y">Y:</string>
+    <string name="z">Z:</string>
+    <string name="connect_device">Connect Device</string>
+</resources>
