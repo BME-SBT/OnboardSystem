@@ -14,14 +14,9 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.MESSAGE_READ
-import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.MESSAGE_TOAST
-import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.TOAST
 import hu.bme.solarboat.onboardsystem.jsonData.ArduinoData
-import hu.bme.solarboat.onboardsystem.service.BluetoothService
-import java.util.*
+import hu.bme.solarboat.onboardsystem.service.*
 
-val MY_UUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb")
 const val REQUEST_DEVICE = 0
 const val REQUEST_ENABLE_BT = 1
 
@@ -83,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun connectDevice(data: Intent?) {
         val extras = data?.extras ?: return
-        val address = extras.getString(DeviceListActivity.EXTRA_DEVICE_ADDRESS)
+        val address = extras.getString(EXTRA_DEVICE_ADDRESS)
 
         val bluetoothDevice = bluetoothAdapter?.getRemoteDevice(address)
         bluetoothService.connect(bluetoothDevice)
