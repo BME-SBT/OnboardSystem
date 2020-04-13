@@ -14,10 +14,11 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import hu.bme.solarboat.onboardsystem.BluetoothService.Companion.MESSAGE_READ
-import hu.bme.solarboat.onboardsystem.BluetoothService.Companion.MESSAGE_TOAST
-import hu.bme.solarboat.onboardsystem.BluetoothService.Companion.TOAST
+import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.MESSAGE_READ
+import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.MESSAGE_TOAST
+import hu.bme.solarboat.onboardsystem.service.BluetoothService.Companion.TOAST
 import hu.bme.solarboat.onboardsystem.jsonData.ArduinoData
+import hu.bme.solarboat.onboardsystem.service.BluetoothService
 import java.util.*
 
 val MY_UUID: UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb")

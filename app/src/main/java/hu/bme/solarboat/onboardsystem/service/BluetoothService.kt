@@ -1,4 +1,4 @@
-package hu.bme.solarboat.onboardsystem
+package hu.bme.solarboat.onboardsystem.service
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -10,6 +10,7 @@ import com.google.gson.JsonIOException
 import com.google.gson.JsonParser
 import com.google.gson.JsonSyntaxException
 import com.google.gson.stream.JsonReader
+import hu.bme.solarboat.onboardsystem.MY_UUID
 import java.io.IOException
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -20,7 +21,8 @@ class BluetoothService(val handler: Handler) {
     private var mConnectThread: ConnectThread? = null
     private var mConnectedThread: ConnectedThread? = null
 
-    var mState = STATE_NONE
+    var mState =
+        STATE_NONE
 
     private val mAdapter = BluetoothAdapter.getDefaultAdapter()
     fun connect(bluetoothDevice: BluetoothDevice?) {
@@ -55,7 +57,8 @@ class BluetoothService(val handler: Handler) {
 
         val socket = bluetoothDevice?.createInsecureRfcommSocketToServiceRecord(MY_UUID)
         init {
-            mState = STATE_CONNECTING
+            mState =
+                STATE_CONNECTING
         }
 
         override fun run() {
@@ -94,7 +97,8 @@ class BluetoothService(val handler: Handler) {
         private val mmInStream: InputStream? = socket?.inputStream
         private val mmOutStream: OutputStream? = socket?.outputStream
         init {
-            mState = STATE_CONNECTED
+            mState =
+                STATE_CONNECTED
         }
 
         override fun run() {
@@ -127,7 +131,8 @@ class BluetoothService(val handler: Handler) {
 
     private fun connectionLost() {
         sendToast("Device connection was lost")
-        mState = STATE_NONE
+        mState =
+            STATE_NONE
     }
 
     private fun connected(socket: BluetoothSocket?, bluetoothDevice: BluetoothDevice?) {
@@ -153,7 +158,8 @@ class BluetoothService(val handler: Handler) {
     private fun connectionFailed() {
         // Send a failure message back to the Activity
         sendToast("Unable to connect device")
-        mState = STATE_NONE
+        mState =
+            STATE_NONE
     }
 
     private fun sendToast(message: String) {
