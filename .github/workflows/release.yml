@@ -16,9 +16,9 @@ jobs:
           java-version: 1.8
       - name: Build debug APK
         run: bash ./gradlew assembleDebug --stacktrace
-      - name: Upload debug APK to Releases 
+      - name: Upload debug APK to Releases
         uses: softprops/action-gh-release@v1
         with:
           files: app/build/outputs/apk/debug/app-debug.apk
-        env: 
+        env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} 
