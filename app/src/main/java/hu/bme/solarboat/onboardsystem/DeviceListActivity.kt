@@ -8,6 +8,8 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import android.widget.TextView
+import hu.bme.solarboat.onboardsystem.service.EXTRA_DEVICE_ADDRESS
+
 
 class DeviceListActivity : Activity() {
     private lateinit var mBtAdapter: BluetoothAdapter
@@ -18,8 +20,7 @@ class DeviceListActivity : Activity() {
 
         setResult(RESULT_CANCELED)
 
-        // Initialize array adapters. One for already paired devices and
-        // one for newly discovered devices
+        // Initialize array adapters
         val pairedDevicesArrayAdapter =
             ArrayAdapter<String>(this, R.layout.device_name)
 
@@ -52,7 +53,7 @@ class DeviceListActivity : Activity() {
     }
 
     private val mDeviceClickListener =
-        OnItemClickListener { _, v, _, _ -> // Cancel discovery because it's costly and we're about to connect
+        OnItemClickListener { _, v, _, _ ->
 
             // Get the device MAC address, which is the last 17 chars in the View
             val info = (v as TextView).text.toString()
@@ -66,8 +67,4 @@ class DeviceListActivity : Activity() {
             setResult(RESULT_OK, intent)
             finish()
         }
-
-    companion object {
-        const val EXTRA_DEVICE_ADDRESS = "device_address"
-    }
 }
