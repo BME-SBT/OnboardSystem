@@ -1,0 +1,36 @@
+{
+  "tilt": {
+    "x": 123,
+    "y": 456,
+    "z": 789
+  },
+  "acceleration": {
+    "x": 123,
+    "y": 456,
+    "z": 789
+  },
+  "compass": {
+    "x": 123,
+    "y": 456,
+    "z": 789
+  },
+  "motor": {
+    "RpM": 123,
+    "temp": 40
+  },
+  "battery": {
+    "Package current": 12,
+    "Package voltage": 34,
+    "SoC": 99,
+    "Temperature": 40
+  },
+  "error": {
+    "source": "BMS/controller/etc",
+    "message": "Something went wrong"
+  },
+  "extra_temps": [
+    12,
+    34,
+    56
+  ]
+}

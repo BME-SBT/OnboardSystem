@@ -20,11 +20,13 @@ data class ArduinoData(
     )
 
     data class Battery(
-            @SerializedName("in")
-            val inB: Int,
-            val outB: Int,
+            @SerializedName("Package current")
+            val packageCurrent: Int,
+            @SerializedName("Package voltage")
+            val packageVoltage: Int,
             @SerializedName("SoC")
             val soC: Int,
+            @SerializedName("Temperature")
             val temp: Int
     )
 
