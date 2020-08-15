@@ -20,14 +20,14 @@ data class ArduinoData(
     )
 
     data class Battery(
-            @SerializedName("Package current")
+        @SerializedName("Package current")
             val packageCurrent: Int,
-            @SerializedName("Package voltage")
+        @SerializedName("Package voltage")
             val packageVoltage: Int,
-            @SerializedName("SoC")
+        @SerializedName("SoC")
             val soC: Int,
-            @SerializedName("Temperature")
-            val temp: Int
+        @SerializedName("Temperature")
+        val temperature: Int
     )
 
     data class Compass(

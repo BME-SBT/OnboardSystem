@@ -115,6 +115,10 @@ class MainActivity : AppCompatActivity() {
         val accelerationY = findViewById<TextView>(R.id.acceleration_y)
         val accelerationZ = findViewById<TextView>(R.id.acceleration_z)
         val messageTv = findViewById<TextView>(R.id.message)
+        val batteryPackageCurrent = findViewById<TextView>(R.id.package_current)
+        val batteryPackageVoltage = findViewById<TextView>(R.id.package_voltage)
+        val batterySoC = findViewById<TextView>(R.id.SoC)
+        val batteryTemperature = findViewById<TextView>(R.id.temperature)
 
 
         tiltX.text = data.tilt.x.toString()
@@ -123,7 +127,12 @@ class MainActivity : AppCompatActivity() {
         accelerationX.text = data.acceleration.x.toString()
         accelerationY.text = data.acceleration.y.toString()
         accelerationZ.text = data.acceleration.z.toString()
+        batteryPackageCurrent.text = data.battery.packageCurrent.toString()
+        batteryPackageVoltage.text = data.battery.packageVoltage.toString()
+        batterySoC.text = data.battery.soC.toString()
+        batteryTemperature.text = data.battery.temperature.toString()
         messageTv.text = data.error.message
+
     }
 }
 
