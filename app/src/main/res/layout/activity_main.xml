@@ -8,32 +8,21 @@
 
     <TextView
         android:id="@+id/tilt_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        style="@style/main_title_style"
         android:text="@string/tilt"
-        android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tilt_x_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/x"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilt_title" />
 
     <TextView
         android:id="@+id/tilt_x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/tilt_x_title"
         app:layout_constraintStart_toEndOf="@+id/tilt_x_title"
@@ -41,20 +30,14 @@
 
     <TextView
         android:id="@+id/tilt_y_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/y"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilt_x_title" />
 
     <TextView
         android:id="@+id/tilt_y"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/tilt_y_title"
         app:layout_constraintStart_toEndOf="@+id/tilt_x_title"
@@ -62,20 +45,14 @@
 
     <TextView
         android:id="@+id/tilt_z_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/z"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tilt_y_title" />
 
     <TextView
         android:id="@+id/tilt_z"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/tilt_z_title"
         app:layout_constraintStart_toEndOf="@+id/tilt_z_title"
@@ -83,32 +60,21 @@
 
     <TextView
         android:id="@+id/acceleration_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        style="@style/main_title_style"
         android:text="@string/acceleration"
-        android:textSize="24sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tilt_z"  />
+        app:layout_constraintTop_toBottomOf="@id/tilt_z" />
 
     <TextView
         android:id="@+id/acceleration_x_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/x"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acceleration_title" />
 
     <TextView
         android:id="@+id/acceleration_x"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/acceleration_x_title"
         app:layout_constraintStart_toEndOf="@+id/acceleration_x_title"
@@ -116,20 +82,14 @@
 
     <TextView
         android:id="@+id/acceleration_y_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/y"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acceleration_x_title" />
 
     <TextView
         android:id="@+id/acceleration_y"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/acceleration_y_title"
         app:layout_constraintStart_toEndOf="@+id/acceleration_x_title"
@@ -137,44 +97,99 @@
 
     <TextView
         android:id="@+id/acceleration_z_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        style="@style/little_title_style"
         android:text="@string/z"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acceleration_y_title" />
 
     <TextView
         android:id="@+id/acceleration_z"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        style="@style/data_style"
         android:text=""
         app:layout_constraintBaseline_toBaselineOf="@+id/acceleration_z_title"
         app:layout_constraintStart_toEndOf="@+id/acceleration_z_title"
         tools:text="123" />
 
     <TextView
-        android:id="@+id/message_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/message"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:id="@+id/battery_title"
+        style="@style/main_title_style"
+        android:text="@string/battery"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/acceleration_z" />
 
     <TextView
+        android:id="@+id/package_current_title"
+        style="@style/little_title_style"
+        android:text="@string/package_current"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/battery_title" />
+
+    <TextView
+        android:id="@+id/package_current"
+        style="@style/data_style"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/package_current_title"
+        app:layout_constraintStart_toEndOf="@+id/package_current_title"
+        tools:text="123" />
+
+    <TextView
+        android:id="@+id/package_voltage_title"
+        style="@style/little_title_style"
+        android:text="@string/package_voltage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/package_current_title" />
+
+    <TextView
+        android:id="@+id/package_voltage"
+        style="@style/data_style"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/package_voltage_title"
+        app:layout_constraintStart_toEndOf="@+id/package_voltage_title"
+        tools:text="123" />
+
+    <TextView
+        android:id="@+id/SoC_title"
+        style="@style/little_title_style"
+        android:text="@string/soc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/package_voltage_title" />
+
+    <TextView
+        android:id="@+id/SoC"
+        style="@style/data_style"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/SoC_title"
+        app:layout_constraintStart_toEndOf="@+id/SoC_title"
+        tools:text="123" />
+
+    <TextView
+        android:id="@+id/temperature_title"
+        style="@style/little_title_style"
+        android:text="@string/temperature"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SoC_title" />
+
+    <TextView
+        android:id="@+id/temperature"
+        style="@style/data_style"
+        android:text=""
+        app:layout_constraintBaseline_toBaselineOf="@+id/temperature_title"
+        app:layout_constraintStart_toEndOf="@+id/temperature_title"
+        tools:text="123" />
+
+    <TextView
+        android:id="@+id/message_title"
+        style="@style/main_title_style"
+        android:text="@string/message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temperature" />
+
+    <TextView
         android:id="@+id/message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/data_style"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        android:text=""
+        android:text="@string/none"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/message_title" />
 
